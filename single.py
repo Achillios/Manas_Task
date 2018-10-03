@@ -43,22 +43,7 @@ if __name__ == "__main__":
     predict2 = [1, 7]
     predict2 = np.dot(predict2, theta)
     print('For population = 70,000, we predict a profit of ', (predict2*10000))
-    input("Press any key ro continue")
-    print('Visualizing J(theta_0, theta_1)...\n')
-    theta0_vals = np.linspace(-10, 10, 100)
-    theta1_vals = np.linspace(-1, 4, 100)
-    J_vals = np.zeros((len(theta0_vals.T), len(theta1_vals.T)))
-    p =0
-    q = 0
-    while p != 100:
-        while q != 100:
-            t = [[theta0_vals[p]], [theta1_vals[q]]]
-            J_vals[p, q] = computeCost(X, y, t)
-            q = q + 1
-        p = p + 1
-    Axes3D.plot_surface(theta0_vals, theta1_vals, np.transpose(J_vals))
-    Axes3D.set_xlabel('theta_0')
-    Axes3D.set_ylabel('theta_1')
+
 
 
 
